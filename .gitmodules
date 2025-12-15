@@ -1,0 +1,6 @@
+[submodule "CypherFuzzer"]
+	path = CypherFuzzer
+	url = git@github.com:jku-lit-scsl/CypherFuzzer.git
+[submodule "CypherRewritingCore"]
+	path = CypherRewritingCore
+	url = git@github.com:jku-lit-scsl/CypherRewritingCore.git
