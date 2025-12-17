@@ -20,21 +20,23 @@ class FuzzRunner: ApplicationRunner {
     lateinit var astRenderer: CypherRewritingUnparser
 
     override fun run(args: ApplicationArguments) {
-        for (query in executeRandomFuzzer()) {
+        var i = 0
+        for (query in randomFuzzerGenerator()) {
             val ast = cypherParser.parse(query)
             val unparedQuery = astRenderer.render(ast)
 
-            println(query)
-            println(unparedQuery)
-            println()
+            if (query != unparedQuery) {
+                println(query)
+                println(unparedQuery)
+                println()
+            }
+
+            print("\rProcessing query #${i++}")
         }
 
-
-
-        println("Running Fuzz")
     }
 
-    fun executeRandomFuzzer(): Sequence<String> {
+    fun randomFuzzerGenerator(): Sequence<String> {
         val randomCypherSettings = RandomCypherFuzzerSettings(
             random = Random(123),
             nodes = 5,
@@ -51,7 +53,6 @@ class FuzzRunner: ApplicationRunner {
             )
         return RandomCypherFuzzer(randomCypherSettings)
             .fuzz()
-            .take(10)
     }
 }
 

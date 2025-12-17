@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Import
 
 @SpringBootApplication
 @Import(value = [CypherRewritingCoreLibConfig::class])
-class FuzzingExperimentsGradleApplication
+class CypherVerificatorParserUnparserApplication
 
 fun main(args: Array<String>) {
-    runApplication<FuzzingExperimentsGradleApplication>(*args)
+    runApplication<CypherVerificatorParserUnparserApplication>(*args)
 }
 
