@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30ec7140-3ebf-4c00-be01-98815b84b688" name="Changes" comment="Fix submodules">
+      <change beforePath="$PROJECT_DIR$/CypherRewritingCore" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CypherRewritingCore/src/main/antlr/at/jku/faw/symspace/cypherrewriter/core/antlr/Cypher.g4" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore/src/main/antlr/at/jku/faw/symspace/cypherrewriter/core/antlr/Cypher.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/Ast.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/Ast.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/parser/CypherRewritingParserImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/parser/CypherRewritingParserImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/parser/CypherRewritingVisitor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/parser/CypherRewritingVisitor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/unparser/CypherRewritingUnparserImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/unparser/CypherRewritingUnparserImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/parser/CypherRewritingVisitorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/parser/CypherRewritingVisitorTest.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
+                <item name="CypherVerificatorParserUnparser" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
+                <item name="CypherVerificatorParserUnparser" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
+                <item name="CypherVerificatorParserUnparser" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.0.0-bin/d6wjpkvcgsg3oed0qlfss3wgl/gradle-9.0.0" javaHome="$USER_HOME$/.jdks/openjdk-21.0.1" gradleVersion="9.0.0" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.CypherRewritingCoreApplication">
+    <configuration name="CypherRewritingCoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="CypherRewritingSystemVerification.CypherRewritingCore.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="at.jku.faw.symspace.cypherrewriter.core.CypherRewritingCoreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FuzzingExperimentsGradleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="CypherRewritingSystemVerification.CypherVerificatorParserUnparser.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="at.daho.cypherrewriting.fuzzingexperiments.FuzzingExperimentsGradleApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.FuzzingExperimentsGradleApplication" />
+      <item itemvalue="Spring Boot.CypherRewritingCoreApplication" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>
