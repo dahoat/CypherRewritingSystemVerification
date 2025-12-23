@@ -22,6 +22,9 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation(project(":CypherRewritingCore"))
     implementation(project(":CypherFuzzer"))
+    implementation("org.neo4j:neo4j:2025.10.1") {
+        exclude(group = "org.neo4j", module = "neo4j-slf4j-provider")
+    }
 }
 
 kotlin {

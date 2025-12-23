@@ -2,36 +2,30 @@ package at.daho.cypherrewriting.fuzzingexperiments
 
 import fuzzer.cypher.fuzzer.random.RandomCypherFuzzer
 import fuzzer.cypher.fuzzer.random.RandomCypherFuzzerSettings
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.stereotype.Component
 import kotlin.random.Random
-import at.jku.faw.symspace.cypherrewriter.core.cypher.parser.CypherRewritingParser
-import at.jku.faw.symspace.cypherrewriter.core.cypher.unparser.CypherRewritingUnparser
+import org.springframework.context.annotation.Profile
 
 @Component
-class FuzzRunner: ApplicationRunner {
+@Profile("!with-database")
+class FuzzRunner: ApplicationRunner, FuzzRunnerBase() {
 
-    @Autowired
-    lateinit var cypherParser: CypherRewritingParser
-
-    @Autowired
-    lateinit var astRenderer: CypherRewritingUnparser
 
     override fun run(args: ApplicationArguments) {
-        var i = 0
         for (query in randomFuzzerGenerator()) {
             val ast = cypherParser.parse(query)
-            val unparedQuery = astRenderer.render(ast)
+            val unparsedQuery = astRenderer.render(ast)
 
-            if (query != unparedQuery) {
+            if (query != unparsedQuery) {
                 println(query)
-                println(unparedQuery)
+                println(unparsedQuery)
                 println()
             }
 
-            print("\rProcessing query #${i++}")
+            queryCount++
+            reportStats()
         }
 
     }
