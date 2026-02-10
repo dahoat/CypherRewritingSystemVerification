@@ -9,7 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/CypherFuzzer" />
+            <option value="$PROJECT_DIR$/CypherFuzzer2" />
             <option value="$PROJECT_DIR$/CypherRewritingCore" />
+            <option value="$PROJECT_DIR$/CypherVerificatorAirbnb" />
             <option value="$PROJECT_DIR$/CypherVerificatorParserUnparser" />
           </set>
         </option>

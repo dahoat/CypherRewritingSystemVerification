@@ -9,8 +9,8 @@ import kotlin.random.Random
 import org.springframework.context.annotation.Profile
 
 @Component
-@Profile("!with-database")
-class FuzzRunner: ApplicationRunner, FuzzRunnerBase() {
+@Profile("random-no-database")
+class RandomFuzzRunner: ApplicationRunner, FuzzRunnerBase() {
 
 
     override fun run(args: ApplicationArguments) {

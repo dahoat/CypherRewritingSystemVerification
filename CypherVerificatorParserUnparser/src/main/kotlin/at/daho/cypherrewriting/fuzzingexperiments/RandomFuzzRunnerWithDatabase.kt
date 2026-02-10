@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component
 import kotlin.random.Random
 
 @Component
-@Profile("with-database")
-class FuzzRunnerWithDatabase: ApplicationRunner, FuzzRunnerBase() {
+@Profile("random-with-database")
+class RandomFuzzRunnerWithDatabase: ApplicationRunner, FuzzRunnerBase() {
 
     @Autowired
     lateinit var session: Session

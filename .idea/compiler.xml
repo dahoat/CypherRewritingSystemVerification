@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="21" />
+    <bytecodeTargetLevel target="21">
+      <module name="CypherVerificatorAirbnb" target="17" />
+      <module name="CypherVerificatorAirbnb.main" target="17" />
+      <module name="CypherVerificatorAirbnb.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CypherRewritingSystemVerification.CypherFuzzer2" options="-parameters" />
+      <module name="CypherRewritingSystemVerification.CypherFuzzer2.main" options="-parameters" />
+      <module name="CypherRewritingSystemVerification.CypherFuzzer2.test" options="-parameters" />
       <module name="CypherRewritingSystemVerification.CypherRewritingCore" options="-parameters" />
       <module name="CypherRewritingSystemVerification.CypherRewritingCore.main" options="-parameters" />
       <module name="CypherRewritingSystemVerification.CypherRewritingCore.test" options="-parameters" />
+      <module name="CypherRewritingSystemVerification.CypherVerificatorAirbnb" options="-parameters" />
+      <module name="CypherRewritingSystemVerification.CypherVerificatorAirbnb.main" options="-parameters" />
+      <module name="CypherRewritingSystemVerification.CypherVerificatorAirbnb.test" options="-parameters" />
       <module name="CypherRewritingSystemVerification.CypherVerificatorParserUnparser" options="-parameters" />
       <module name="CypherRewritingSystemVerification.CypherVerificatorParserUnparser.main" options="-parameters" />
       <module name="CypherRewritingSystemVerification.CypherVerificatorParserUnparser.test" options="-parameters" />
+      <module name="CypherVerificatorAirbnb" options="-parameters" />
+      <module name="CypherVerificatorAirbnb.main" options="-parameters" />
+      <module name="CypherVerificatorAirbnb.test" options="-parameters" />
     </option>
   </component>
 </project>

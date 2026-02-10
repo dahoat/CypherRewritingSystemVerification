@@ -1,3 +1,3 @@
 rootProject.name = "CypherRewritingSystemVerification"
 
-include("CypherRewritingCore", "CypherFuzzer", "CypherVerificatorParserUnparser")
+include("CypherRewritingCore", "CypherFuzzer", "CypherVerificatorParserUnparser", "CypherVerificatorAirbnb", "CypherFuzzer2")

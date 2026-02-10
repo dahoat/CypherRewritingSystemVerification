@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Component
 
 @Component
-@Profile("with-database")
+@Profile("random-with-database")
 class SessionBean {
 
     @Value("\${app.db.uri}")
