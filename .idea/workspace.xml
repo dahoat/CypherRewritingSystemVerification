@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca92ceea-e886-4a4f-8198-bc2c94cf131b" name="Changes" comment="Intermediate savepoint">
+      <change afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/FilterTypeHelperTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/LabelMatcherTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/ReturnTypeHelperTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/RuleHelperTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/detector/PermissionDetectorTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CypherRewritingCore" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/enforcer/CypherEnforcer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/enforcer/CypherEnforcer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/enforcer/CypherEnforcerImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/enforcer/CypherEnforcerImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CypherVerificatorAirbnb/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/CypherVerificatorAirbnb/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/detector/PermissionDetectorImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/detector/PermissionDetectorImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/AirbnbFuzzer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/AirbnbFuzzer.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,6 +164,9 @@
     "Gradle.CypherRewritingVisitorTest.visitOC_RelationshipPattern.executor": "Debug",
     "Gradle.CypherRewritingVisitorTest.visitOC_UnaryAddOrSubtractExpression.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
+    "Gradle.FilterTypeHelperTest.executor": "Run",
+    "Gradle.PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode.executor": "Run",
+    "Gradle.PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk.executor": "Run",
     "Gradle.Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'.executor": "Run",
     "JUnit.Whole project (1).executor": "Run",
     "JUnit.Whole project.executor": "Run",
@@ -245,9 +251,10 @@
             <map>
               <entry key="Build CypherRewritingSystemVerification" value="STOPPED" />
               <entry key="CypherEnforcerTest" value="STOPPED" />
-              <entry key="CypherRewritingSystemVerification [:CypherFuzzer2:clean]" value="STOPPED" />
-              <entry key="CypherRewritingSystemVerification [build]" value="STOPPED" />
-              <entry key="CypherRewritingSystemVerification [clean]" value="STOPPED" />
+              <entry key="FilterTypeHelperTest" value="STOPPED" />
+              <entry key="PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode" value="STOPPED" />
+              <entry key="PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk" value="STOPPED" />
+              <entry key="Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'" value="STOPPED" />
             </map>
           </value>
         </entry>
@@ -292,87 +299,111 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="CypherRewritingSystemVerification [:CypherFuzzer2:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FilterTypeHelperTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":CypherFuzzer2:clean" />
+            <option value=":CypherRewritingCore:test" />
+            <option value="--tests" />
+            <option value="&quot;at.jku.faw.symspace.cypherrewriter.core.cypher.FilterTypeHelperTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <GradleProfilingDisabled>false</GradleProfilingDisabled>
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="CypherRewritingSystemVerification [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value=":CypherRewritingCore:test" />
+            <option value="--tests" />
+            <option value="&quot;at.jku.faw.symspace.cypherrewriter.core.cypher.detector.PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <GradleProfilingDisabled>false</GradleProfilingDisabled>
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="CypherRewritingSystemVerification [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":CypherRewritingCore:test" />
+            <option value="--tests" />
+            <option value="&quot;at.jku.faw.symspace.cypherrewriter.core.cypher.detector.PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <GradleProfilingDisabled>false</GradleProfilingDisabled>
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="at.daho.cypherrewriting.verification.MainKt" />
-      <module name="CypherRewritingSystemVerification.CypherFuzzer2.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":CypherRewritingCore:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
     </configuration>
     <configuration name="Airbnb-Fuzzer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" value="airbnb-fuzzer" />
@@ -429,10 +460,10 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.CypherEnforcerTest" />
-      <item itemvalue="Gradle.CypherRewritingSystemVerification [:CypherFuzzer2:clean]" />
-      <item itemvalue="Gradle.CypherRewritingSystemVerification [build]" />
-      <item itemvalue="Gradle.CypherRewritingSystemVerification [clean]" />
-      <item itemvalue="Kotlin.MainKt" />
+      <item itemvalue="Gradle.FilterTypeHelperTest" />
+      <item itemvalue="Gradle.PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode" />
+      <item itemvalue="Gradle.PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk" />
+      <item itemvalue="Gradle.Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'" />
       <item itemvalue="Spring Boot.Airbnb-Import" />
       <item itemvalue="Spring Boot.Airbnb-Fuzzer" />
       <item itemvalue="Spring Boot.CypherVerificatorAirbnbApplication (1)" />
@@ -442,11 +473,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'" />
+        <item itemvalue="Gradle.PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode" />
+        <item itemvalue="Gradle.PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk" />
+        <item itemvalue="Gradle.FilterTypeHelperTest" />
         <item itemvalue="Gradle.CypherEnforcerTest" />
-        <item itemvalue="Gradle.CypherRewritingSystemVerification [clean]" />
-        <item itemvalue="Gradle.CypherRewritingSystemVerification [:CypherFuzzer2:clean]" />
-        <item itemvalue="Gradle.CypherRewritingSystemVerification [build]" />
-        <item itemvalue="Kotlin.MainKt" />
       </list>
     </recent_temporary>
   </component>
@@ -468,7 +499,7 @@
       <workItem from="1768408827926" duration="6777000" />
       <workItem from="1769110774802" duration="7310000" />
       <workItem from="1770065551528" duration="11993000" />
-      <workItem from="1770749276984" duration="22378000" />
+      <workItem from="1770749276984" duration="26273000" />
     </task>
     <task id="LOCAL-00001" summary="Modifications to work for Cypher verification.">
       <option name="closed" value="true" />
@@ -598,7 +629,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770849745835</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Intermediate savepoint">
+      <option name="closed" value="true" />
+      <created>1770877527660</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1770877527660</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

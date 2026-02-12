@@ -167,7 +167,7 @@ class AirbnbFuzzer : ApplicationRunner {
         cypherRelationship(hostNode, "HOSTS", listingNode)
         cypherRelationship(listingNode, "HAS", amenityNode)
         cypherRelationship(reviewNode, "REVIEWS", listingNode)
-        cypherRelationship(userNode, "WROTE", userNode)
+        cypherRelationship(userNode, "WROTE", reviewNode)
 
         fetchValuesFromDatabase(sessionBean.session())
     }
