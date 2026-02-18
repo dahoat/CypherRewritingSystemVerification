@@ -1,9 +1,7 @@
-package at.daho.cypherrewriting.cypherverificatorairbnb
+package at.daho.cypherrewriting.cypherverificatorairbnb.fuzzer
 
 import at.jku.faw.symspace.cypherrewriter.core.cypher.ArgumentType
 import at.jku.faw.symspace.cypherrewriter.core.cypher.AuthorizationLevel
-import at.jku.faw.symspace.cypherrewriter.core.cypher.ConditionBoolean
-import at.jku.faw.symspace.cypherrewriter.core.cypher.ConditionCombination
 import at.jku.faw.symspace.cypherrewriter.core.cypher.ConditionExpression
 import at.jku.faw.symspace.cypherrewriter.core.cypher.FilterTemplate
 import at.jku.faw.symspace.cypherrewriter.core.cypher.FilterType
@@ -13,9 +11,11 @@ import at.jku.faw.symspace.cypherrewriter.core.cypher.PermissionConfig
 import at.jku.faw.symspace.cypherrewriter.core.cypher.Policy
 import at.jku.faw.symspace.cypherrewriter.core.cypher.ReturnType
 import at.jku.faw.symspace.cypherrewriter.core.cypher.Rule
+import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Component
 
 @Component
+@Profile("user-node-access-fuzzer")
 object AirbnbPermissionConfig: PermissionConfig(listOf(
     Policy(
         "(u:User)",

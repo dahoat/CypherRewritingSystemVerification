@@ -16,17 +16,22 @@ import kotlin.repeat
 class FuzzGenerator(
     private val schema: CypherSchema,
     private val settings: FuzzSettings,
-): Iterable<String> {
+): Iterable<FuzzItem> {
 
     val unparser: CypherRewritingUnparser = CypherRewritingUnparserImpl()
 
-    override fun iterator() = object : Iterator<String> {
+    override fun iterator() = object : Iterator<FuzzItem> {
         override fun hasNext() = true
 
-        override fun next(): String {
-            return FuzzQuery(schema, settings).generate().let {
-                unparser.render(it)
-            }
+        override fun next(): FuzzItem {
+            val fuzzQuery = FuzzQuery(schema, settings)
+            val (ast, metrics) = fuzzQuery.generateWithMetrics()
+            val query = unparser.render(ast)
+
+            val mutated = fuzzQuery.mutateIndirectWhereValues()
+            val variantQuery = if (mutated) unparser.render(ast) else null
+
+            return FuzzItem(query, variantQuery, metrics)
         }
     }
 
@@ -38,6 +43,40 @@ class FuzzQuery(
 ) {
     private var variableCount: Int = 0
     private val variableStore = VariableStore()
+    private val filteredVariables = mutableSetOf<String>()
+    private val returnedVariables = mutableSetOf<String>()
+    private val whereElementInfos = mutableListOf<WhereElementInfo>()
+
+    private val allowedNodes: Set<CypherNode> by lazy {
+        val labels = settings.node.allowedLabels
+        if (labels == null) {
+            schema.nodes
+        } else {
+            schema.nodes.filter { node -> node.labels.any { it in labels } }.toSet()
+        }
+    }
+
+    private data class WhereElementInfo(
+        val varName: String,
+        val structuralGroup: AstInternalNode,
+        val operator: String,
+        val isNullCheck: Boolean
+    ) {
+        fun getComparisonOperator(): AstLeafValue {
+            val node = structuralGroup.elements.getOrNull(1)
+            check(node is AstLeafValue && node.type == AstType.COMPARISON) {
+                "Expected AstLeafValue(COMPARISON) at index 1 of STRUCTURAL_GROUP, but got: $node"
+            }
+            return node
+        }
+
+        fun setComparisonOperator(value: AstLeafValue) {
+            check(value.type == AstType.COMPARISON) {
+                "Expected AstLeafValue(COMPARISON), but got type: ${value.type}"
+            }
+            structuralGroup.elements[1] = value
+        }
+    }
 
     private companion object {
         const val OP_EQ = "="
@@ -64,6 +103,52 @@ class FuzzQuery(
         return query
     }
 
+    fun generateWithMetrics(): Pair<AstInternalNode, FuzzMetrics> {
+        val ast = generate()
+        val labeledVars = variableStore.allVariables()
+            .associateWith { variableStore.getLabels(it) }
+            .filterValues { it.isNotEmpty() }
+        return ast to FuzzMetrics(labeledVars, filteredVariables.toSet(), returnedVariables.toSet())
+    }
+
+    fun mutateIndirectWhereValues(): Boolean {
+        val indirectVars = filteredVariables - returnedVariables
+        if (indirectVars.isEmpty()) return false
+
+        var mutated = false
+        for (info in whereElementInfos) {
+            if (info.varName in indirectVars) {
+                if (info.isNullCheck) {
+                    val currentOp = info.getComparisonOperator().value.toString()
+                    val flipped = if (currentOp == OP_IS_NULL) {
+                        OP_IS_NOT_NULL
+                    } else {
+                        OP_IS_NULL
+                    }
+                    info.setComparisonOperator(AstLeafValue(AstType.COMPARISON, flipped))
+                } else {
+                    val flippedOp = flipOperator(info.operator)
+                    info.setComparisonOperator(AstLeafValue(AstType.COMPARISON, flippedOp))
+                }
+                mutated = true
+            }
+        }
+        return mutated
+    }
+
+    private fun flipOperator(operator: String): String = when (operator) {
+        OP_EQ -> OP_NEQ
+        OP_NEQ -> OP_EQ
+        OP_LT -> OP_GTE
+        OP_GTE -> OP_LT
+        OP_GT -> OP_LTE
+        OP_LTE -> OP_GT
+        OP_STARTS_WITH -> OP_NEQ
+        OP_ENDS_WITH -> OP_NEQ
+        OP_CONTAINS -> OP_NEQ
+        else -> OP_EQ
+    }
+
     private fun generateMatch(): AstNode {
         val match = AstInternalNode(AstType.MATCH)
 
@@ -82,7 +167,7 @@ class FuzzQuery(
         val where = AstInternalNode(AstType.WHERE)
         val elements = mutableListOf<AstInternalNode>()
 
-        repeat(selectCount(settings.where.elementsRange)) {
+        repeat(selectCount(settings.where.length)) {
             generateWhereElement().let { elements.add(it) }
         }
         where.elements.add(combineWhereElements(elements))
@@ -123,6 +208,7 @@ class FuzzQuery(
         } else {
             RANDOM_VAR_PREFIX + settings.random.nextInt()
         }
+        filteredVariables.add(varName)
         val variable = AstLeafValue(AstType.VARIABLE, varName)
         val properties = resolvePropertiesForVariable(varName)
 
@@ -135,13 +221,16 @@ class FuzzQuery(
         val group = AstInternalNode(AstType.STRUCTURAL_GROUP)
         group.elements.add(buildPropertyDotAccess(variable, selectedProperty.name))
 
-        if (flipCoin(0.1)) {
+        if (flipCoin(settings.where.nullCheckProbability)) {
             val nullOp = if (settings.random.nextBoolean()) OP_IS_NULL else OP_IS_NOT_NULL
             group.elements.add(AstLeafValue(AstType.COMPARISON, nullOp))
+            whereElementInfos.add(WhereElementInfo(varName, group, nullOp, isNullCheck = true))
         } else {
             val operator = selectComparisonOperator(selectedProperty.type)
+            val successful = flipCoin(settings.where.successfulCheckProbability)
             group.elements.add(AstLeafValue(AstType.COMPARISON, operator))
-            group.elements.add(generateWhereValue(selectedProperty, operator))
+            group.elements.add(generateWhereValue(selectedProperty, operator, forceSuccessful = successful))
+            whereElementInfos.add(WhereElementInfo(varName, group, operator, isNullCheck = false))
         }
 
         return group
@@ -164,8 +253,8 @@ class FuzzQuery(
         return operators.random(settings.random)
     }
 
-    private fun generateWhereValue(property: CypherProperty<out Any>, operator: String): AstNode {
-        val successful = flipCoin(settings.where.successfulCheckProbability)
+    private fun generateWhereValue(property: CypherProperty<out Any>, operator: String, forceSuccessful: Boolean? = null): AstNode {
+        val successful = forceSuccessful ?: flipCoin(settings.where.successfulCheckProbability)
         val type = property.type
         val storedValue = if (property.values.isNotEmpty()) property.values.random(settings.random) else null
 
@@ -281,7 +370,7 @@ class FuzzQuery(
     }
 
     private fun handleLimit(returnNode: AstInternalNode) {
-        if (flipCoin(settings.returnSettings.limitProbability)) {
+        if (settings.returnSettings.generateLimit && flipCoin(settings.returnSettings.limitProbability)) {
             val limit = AstInternalNode(AstType.LIMIT).apply {
                 elements.add(
                     AstLeafValue(
@@ -295,7 +384,7 @@ class FuzzQuery(
     }
 
     private fun handleSkip(returnNode: AstInternalNode) {
-        if (flipCoin(settings.returnSettings.skipProbability)) {
+        if (settings.returnSettings.generateSkip && flipCoin(settings.returnSettings.skipProbability)) {
             val skip = AstInternalNode(AstType.SKIP).apply {
                 elements.add(
                     AstLeafValue(
@@ -317,6 +406,7 @@ class FuzzQuery(
     private fun handleReturnItems(returnNode: AstInternalNode) {
         if (variableStore.isEmpty() || flipCoin(settings.returnSettings.asteriskProbability)) {
             returnNode.elements.add(AstLeafNoValue(AstType.ASTERISK))
+            returnedVariables.addAll(variableStore.allVariables())
         } else {
             repeat(selectCount(settings.returnSettings.length)) {
                 returnNode.elements.add(selectElementForReturn())
@@ -351,17 +441,35 @@ class FuzzQuery(
 
     private fun selectElementForReturn(): AstNode {
         val varName = variableStore.random(settings.random)
+        returnedVariables.add(varName)
         val variable = AstLeafValue(AstType.VARIABLE, varName)
 
-        if (flipCoin(settings.returnSettings.propertyAccessProbability)) {
+        val baseElement = if (flipCoin(settings.returnSettings.propertyAccessProbability)) {
             val labels = variableStore.getLabels(varName)
             val properties = schema.nodes.filter { it.labels.intersect(labels.toSet()).isNotEmpty() }.flatMap { it.properties }
             if (properties.isNotEmpty()) {
-                return buildPropertyDotAccess(variable, properties.random(settings.random).name)
+                buildPropertyDotAccess(variable, properties.random(settings.random).name)
+            } else {
+                variable
             }
+        } else {
+            variable
         }
 
-        return variable
+        if (flipCoin(settings.returnSettings.aggregationProbability)) {
+            return generateAggregationFunction(baseElement)
+        }
+        return baseElement
+    }
+
+    private fun generateAggregationFunction(innerElement: AstNode): AstNode {
+        val functionInvocation = AstInternalNode(AstType.FUNCTION_INVOCATION)
+        val funcName = settings.returnSettings.aggregationFunctions.random(settings.random)
+        functionInvocation.elements.add(AstLeafValue(AstType.FUNCTION_NAME, funcName))
+        val argument = AstInternalNode(AstType.ARGUMENT)
+        argument.elements.addAll(if (innerElement is AstInternalNode) innerElement.elements else listOf(innerElement))
+        functionInvocation.elements.add(argument)
+        return functionInvocation
     }
 
     private fun buildPropertyDotAccess(variable: AstLeafValue, propName: String): AstInternalNode {
@@ -396,7 +504,7 @@ class FuzzQuery(
         val node = AstInternalNode(AstType.NODE)
         var variableNode: AstLeafValue? = null
         var labelNodes: List<AstLeafValue>? = null
-        patternContext.currentCypherNode = schema.nodes.random(settings.random)
+        patternContext.currentCypherNode = allowedNodes.random(settings.random)
 
         if (flipCoin(settings.node.variableProbability)) {
             variableNode = nextVariable()
@@ -430,7 +538,7 @@ class FuzzQuery(
 
         val direction: AstType
         val label: String?
-        if (fromLastNode.isNotEmpty() && toLastNode.isNotEmpty()) {
+        if (fromLastNode.isNotEmpty() || toLastNode.isNotEmpty()) {
             val relationshipSchema = (fromLastNode + toLastNode).random(settings.random)
 
             direction = if (relationshipSchema.bidirectional && flipCoin(settings.relationship.bidirectionalProbability)) {
@@ -587,6 +695,8 @@ class VariableStore {
     fun random(random: Random): String {
         return variables.random(random)
     }
+
+    fun allVariables(): Set<String> = variables.toSet()
 
     fun getLabels(variable: String): Set<String> {
         if (variable in nodeVariables) {

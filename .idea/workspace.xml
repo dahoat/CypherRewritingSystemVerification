@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca92ceea-e886-4a4f-8198-bc2c94cf131b" name="Changes" comment="Intermediate savepoint">
-      <change afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/FilterTypeHelperTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/LabelMatcherTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/ReturnTypeHelperTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/RuleHelperTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/detector/PermissionDetectorTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CypherRewritingCore" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/detector/PermissionDetectorImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore/src/main/kotlin/at/jku/faw/symspace/cypherrewriter/core/cypher/detector/PermissionDetectorImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/AirbnbFuzzer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/AirbnbFuzzer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/IdentifyReviewAuthorFuzzer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/IdentifyReviewAuthorFuzzer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/ReviewOwnershipFuzzer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/ReviewOwnershipFuzzer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/ReviewOwnershipPermissionConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/ReviewOwnershipPermissionConfig.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,25 +51,20 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
-                <item name="CypherFuzzer2" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
-                <item name="CypherFuzzer2" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
-                <item name="CypherFuzzer2" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+                <item name="CypherVerificatorAirbnb" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
                 <item name="CypherVerificatorAirbnb" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
+                <item name="CypherVerificatorAirbnb" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -98,6 +89,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -106,13 +102,6 @@
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/7175b5de8ceb04e496bdc45c6fd9e33631737e34/kotlin-stdlib-2.1.10-sources.jar!/commonMain/kotlin/collections/Collections.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/7175b5de8ceb04e496bdc45c6fd9e33631737e34/kotlin-stdlib-2.1.10-sources.jar!/commonMain/kotlin/util/Tuples.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver/6.0.2/9b334be34f7dac6cba616b29d54195beea7039aa/neo4j-java-driver-6.0.2.jar!/org/neo4j/driver/Session.class" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver/6.0.2/c7eceb46b09c4f50b44f5a50a51e41acac402b0f/neo4j-java-driver-6.0.2-sources.jar!/org/neo4j/driver/Query.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver/6.0.2/c7eceb46b09c4f50b44f5a50a51e41acac402b0f/neo4j-java-driver-6.0.2-sources.jar!/org/neo4j/driver/Session.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver/6.0.2/c7eceb46b09c4f50b44f5a50a51e41acac402b0f/neo4j-java-driver-6.0.2-sources.jar!/org/neo4j/driver/SimpleQueryRunner.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver/6.0.2/c7eceb46b09c4f50b44f5a50a51e41acac402b0f/neo4j-java-driver-6.0.2-sources.jar!/org/neo4j/driver/TransactionConfig.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver/6.0.2/c7eceb46b09c4f50b44f5a50a51e41acac402b0f/neo4j-java-driver-6.0.2-sources.jar!/org/neo4j/driver/Value.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver/6.0.2/c7eceb46b09c4f50b44f5a50a51e41acac402b0f/neo4j-java-driver-6.0.2-sources.jar!/org/neo4j/driver/types/MapAccessor.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-dsl/2024.4.1/57d76ae016a5987541185601577d49028a32f43c/neo4j-cypher-dsl-2024.4.1-sources.jar!/org/neo4j/cypherdsl/core/StatementBuilder.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-dsl/2024.4.1/f18b794dfcd80db19eece9912c9450bf2499c06c/neo4j-cypher-dsl-2024.4.1.jar!/org/neo4j/cypherdsl/core/StatementBuilder.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/openjdk-21.0.1/lib/src.zip!/java.base/java/time/Duration.java" root0="SKIP_INSPECTION" />
   </component>
@@ -132,85 +121,95 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.AstVisualizerTest.executor": "Run",
-    "Gradle.Build CypherRewritingSystemVerification.executor": "Run",
-    "Gradle.CypherEnforcerTest.executor": "Run",
-    "Gradle.CypherRewritingSystemVerification [:CypherFuzzer2:at.daho.cypherrewriting.verification.MainKt.main()].executor": "Run",
-    "Gradle.CypherRewritingSystemVerification [:CypherFuzzer2:clean].executor": "Run",
-    "Gradle.CypherRewritingSystemVerification [:CypherFuzzer:build].executor": "Run",
-    "Gradle.CypherRewritingSystemVerification [:CypherRewritingCore:build].executor": "Run",
-    "Gradle.CypherRewritingSystemVerification [:CypherVerificatorAirbnb:build].executor": "Run",
-    "Gradle.CypherRewritingSystemVerification [:CypherVerificatorAirbnb:clean].executor": "Run",
-    "Gradle.CypherRewritingSystemVerification [:CypherVerificatorParserUnparser:build].executor": "Run",
-    "Gradle.CypherRewritingSystemVerification [:CypherVerificatorParserUnparser:clean].executor": "Run",
-    "Gradle.CypherRewritingSystemVerification [build].executor": "Run",
-    "Gradle.CypherRewritingSystemVerification [clean].executor": "Debug",
-    "Gradle.CypherRewritingSystemVerification [generateGrammarSource].executor": "Debug",
-    "Gradle.CypherRewritingSystemVerification [generateTestGrammarSource].executor": "Run",
-    "Gradle.CypherRewritingVisitorTest.contextLoads.executor": "Run",
-    "Gradle.CypherRewritingVisitorTest.executor": "Run",
-    "Gradle.CypherRewritingVisitorTest.visitOC_BooleanLiteral.executor": "Run",
-    "Gradle.CypherRewritingVisitorTest.visitOC_ComparisonExpression.executor": "Run",
-    "Gradle.CypherRewritingVisitorTest.visitOC_Cypher.executor": "Run",
-    "Gradle.CypherRewritingVisitorTest.visitOC_Cypher_fuzzGenerated.executor": "Run",
-    "Gradle.CypherRewritingVisitorTest.visitOC_IntegerLiteral.executor": "Run",
-    "Gradle.CypherRewritingVisitorTest.visitOC_Literal.executor": "Debug",
-    "Gradle.CypherRewritingVisitorTest.visitOC_NumberLiteral.executor": "Debug",
-    "Gradle.CypherRewritingVisitorTest.visitOC_PartialComparisonExpression.executor": "Run",
-    "Gradle.CypherRewritingVisitorTest.visitOC_RangeLiteral.executor": "Run",
-    "Gradle.CypherRewritingVisitorTest.visitOC_RelationshipPattern.executor": "Debug",
-    "Gradle.CypherRewritingVisitorTest.visitOC_UnaryAddOrSubtractExpression.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.FilterTypeHelperTest.executor": "Run",
-    "Gradle.PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode.executor": "Run",
-    "Gradle.PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk.executor": "Run",
-    "Gradle.Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'.executor": "Run",
-    "JUnit.Whole project (1).executor": "Run",
-    "JUnit.Whole project.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.Airbnb Import.executor": "Run",
-    "Spring Boot.Airbnb-Fuzzer.executor": "Run",
-    "Spring Boot.Airbnb-Import.executor": "Run",
-    "Spring Boot.CypherVerificatorParserUnparserApplication.executor": "Run",
-    "Spring Boot.FuzzingExperimentsGradleApplication.executor": "Run",
-    "Spring Boot.ParserUnparser with DB.executor": "Debug",
-    "Spring Boot.ParserUnparser.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/home/daniel/IdeaProjects/CypherRewritingSystemVerification/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core",
-    "last_opened_file_path": "/home/daniel/IdeaProjects/CypherRewritingSystemVerification/CypherFuzzer2/src/main/kotlin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/home/daniel/IdeaProjects/CypherRewritingSystemVerification/CypherFuzzer2/src/main/kotlin/Main.kt",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.AstVisualizerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build CypherRewritingSystemVerification.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CheckMutatedQueryLeaksTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CheckMutatedQueryLeaksTest.mutatedQueryDetectsLeakForUserFilteredReviewReturned.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherEnforcerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [:CypherFuzzer2:at.daho.cypherrewriting.verification.MainKt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [:CypherFuzzer2:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [:CypherFuzzer:build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [:CypherRewritingCore:build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [:CypherVerificatorAirbnb:build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [:CypherVerificatorAirbnb:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [:CypherVerificatorParserUnparser:build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [:CypherVerificatorParserUnparser:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [generateGrammarSource].executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.CypherRewritingSystemVerification [generateTestGrammarSource].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_BooleanLiteral.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_ComparisonExpression.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_Cypher.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_Cypher_fuzzGenerated.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_IntegerLiteral.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_Literal.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_NumberLiteral.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_PartialComparisonExpression.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_RangeLiteral.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_RelationshipPattern.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.CypherRewritingVisitorTest.visitOC_UnaryAddOrSubtractExpression.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FilterTypeHelperTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ReviewAuthorFuzzerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ReviewAuthorPermissionTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'at.daho.cypherrewriting.cypherverificatorairbnb'.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Whole project (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Whole project.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Airbnb Import.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Airbnb-Fuzzer HostListings.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Airbnb-Fuzzer IdentifyReviewAuthor.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Airbnb-Fuzzer ReviewAuthor.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Airbnb-Fuzzer ReviewOwnership.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Airbnb-Fuzzer.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Airbnb-Import.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.CypherVerificatorParserUnparserApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.FuzzingExperimentsGradleApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ParserUnparser with DB.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.ParserUnparser.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;airbnb-indirect-access&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/daniel/IdeaProjects/CypherRewritingSystemVerification/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/daniel/IdeaProjects/CypherRewritingSystemVerification/error_report&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/daniel/IdeaProjects/CypherRewritingSystemVerification/CypherFuzzer2/src/main/kotlin/Main.kt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/error_report" />
       <recent name="$PROJECT_DIR$/CypherFuzzer2/src/main/kotlin" />
       <recent name="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/resources/data" />
       <recent name="$PROJECT_DIR$/CypherVerificatorParserUnparser/src/main/resources" />
@@ -221,6 +220,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="at.daho.cypherrewriting.cypherverificatorairbnb" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="at.jku.faw.symspace.cypherrewriter.core.cypher.parser" />
     </key>
@@ -229,6 +231,8 @@
       <recent name="at.daho.cypherrewriting.fuzzingexperiments" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="at.daho.cypherrewriting.cypherverificatorairbnb.fuzzer" />
+      <recent name="at.daho.cypherrewriting.cypherverificatorairbnb.model" />
       <recent name="at.daho.cypherrewriting.verification" />
       <recent name="at.daho.cypherrewriting.cypherverificatorairbnb" />
     </key>
@@ -250,29 +254,14 @@
           <value>
             <map>
               <entry key="Build CypherRewritingSystemVerification" value="STOPPED" />
-              <entry key="CypherEnforcerTest" value="STOPPED" />
-              <entry key="FilterTypeHelperTest" value="STOPPED" />
-              <entry key="PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode" value="STOPPED" />
-              <entry key="PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk" value="STOPPED" />
-              <entry key="Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <map>
-              <entry key="Airbnb-Fuzzer" value="STOPPED" />
-              <entry key="Airbnb-Import" value="STOPPED" />
-              <entry key="ParserUnparser" value="STOPPED" />
-              <entry key="ParserUnparser with DB" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Airbnb-Fuzzer">
-    <configuration name="CypherEnforcerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Spring Boot.Airbnb-Fuzzer ReviewOwnership">
+    <configuration name="CheckMutatedQueryLeaksTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -283,9 +272,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":CypherRewritingCore:test" />
+            <option value=":CypherVerificatorAirbnb:test" />
             <option value="--tests" />
-            <option value="&quot;at.jku.faw.symspace.cypherrewriter.core.cypher.enforcer.CypherEnforcerTest&quot;" />
+            <option value="&quot;at.daho.cypherrewriting.cypherverificatorairbnb.CheckMutatedQueryLeaksTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -299,7 +288,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="FilterTypeHelperTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CheckMutatedQueryLeaksTest.mutatedQueryDetectsLeakForUserFilteredReviewReturned" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -310,9 +299,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":CypherRewritingCore:test" />
+            <option value=":CypherVerificatorAirbnb:test" />
             <option value="--tests" />
-            <option value="&quot;at.jku.faw.symspace.cypherrewriter.core.cypher.FilterTypeHelperTest&quot;" />
+            <option value="&quot;at.daho.cypherrewriting.cypherverificatorairbnb.CheckMutatedQueryLeaksTest.mutatedQueryDetectsLeakForUserFilteredReviewReturned&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -326,7 +315,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ReviewAuthorFuzzerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -337,9 +326,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":CypherRewritingCore:test" />
+            <option value=":CypherVerificatorAirbnb:test" />
             <option value="--tests" />
-            <option value="&quot;at.jku.faw.symspace.cypherrewriter.core.cypher.detector.PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode&quot;" />
+            <option value="&quot;at.daho.cypherrewriting.cypherverificatorairbnb.ReviewAuthorFuzzerTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -353,7 +342,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ReviewAuthorPermissionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -364,9 +353,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":CypherRewritingCore:test" />
+            <option value=":CypherVerificatorAirbnb:test" />
             <option value="--tests" />
-            <option value="&quot;at.jku.faw.symspace.cypherrewriter.core.cypher.detector.PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk&quot;" />
+            <option value="&quot;at.daho.cypherrewriting.cypherverificatorairbnb.ReviewAuthorPermissionTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -380,7 +369,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'at.daho.cypherrewriting.cypherverificatorairbnb'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -391,7 +380,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":CypherRewritingCore:test" />
+            <option value=":CypherVerificatorAirbnb:test" />
+            <option value="--tests" />
+            <option value="&quot;at.daho.cypherrewriting.cypherverificatorairbnb.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -405,8 +396,32 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="Airbnb-Fuzzer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" value="airbnb-fuzzer" />
+    <configuration name="Airbnb-Fuzzer HostListings" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="host-listing-fuzzer" />
+      <module name="CypherRewritingSystemVerification.CypherVerificatorAirbnb.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="at.daho.cypherrewriting.cypherverificatorairbnb.CypherVerificatorAirbnbApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Airbnb-Fuzzer IdentifyReviewAuthor" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="identify-review-author-fuzzer" />
+      <module name="CypherRewritingSystemVerification.CypherVerificatorAirbnb.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="at.daho.cypherrewriting.cypherverificatorairbnb.CypherVerificatorAirbnbApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Airbnb-Fuzzer ReviewOwnership" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="review-ownership-fuzzer" />
+      <module name="CypherRewritingSystemVerification.CypherVerificatorAirbnb.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="at.daho.cypherrewriting.cypherverificatorairbnb.CypherVerificatorAirbnbApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Airbnb-Fuzzer UserNodeAccess" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="user-node-access-fuzzer" />
       <module name="CypherRewritingSystemVerification.CypherVerificatorAirbnb.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="at.daho.cypherrewriting.cypherverificatorairbnb.CypherVerificatorAirbnbApplication" />
       <method v="2">
@@ -459,13 +474,16 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.CypherEnforcerTest" />
-      <item itemvalue="Gradle.FilterTypeHelperTest" />
-      <item itemvalue="Gradle.PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode" />
-      <item itemvalue="Gradle.PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk" />
-      <item itemvalue="Gradle.Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'" />
+      <item itemvalue="Gradle.CheckMutatedQueryLeaksTest" />
+      <item itemvalue="Gradle.CheckMutatedQueryLeaksTest.mutatedQueryDetectsLeakForUserFilteredReviewReturned" />
+      <item itemvalue="Gradle.Tests in 'at.daho.cypherrewriting.cypherverificatorairbnb'" />
+      <item itemvalue="Gradle.ReviewAuthorFuzzerTest" />
+      <item itemvalue="Gradle.ReviewAuthorPermissionTest" />
       <item itemvalue="Spring Boot.Airbnb-Import" />
-      <item itemvalue="Spring Boot.Airbnb-Fuzzer" />
+      <item itemvalue="Spring Boot.Airbnb-Fuzzer UserNodeAccess" />
+      <item itemvalue="Spring Boot.Airbnb-Fuzzer HostListings" />
+      <item itemvalue="Spring Boot.Airbnb-Fuzzer IdentifyReviewAuthor" />
+      <item itemvalue="Spring Boot.Airbnb-Fuzzer ReviewOwnership" />
       <item itemvalue="Spring Boot.CypherVerificatorAirbnbApplication (1)" />
       <item itemvalue="Spring Boot.CypherRewritingCoreApplication" />
       <item itemvalue="Spring Boot.ParserUnparser" />
@@ -473,13 +491,16 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'CypherRewritingSystemVerification.CypherRewritingCore.test'" />
-        <item itemvalue="Gradle.PermissionDetectorTest.matchEmptyLabelsFalseDoesNotMatchLabellessNode" />
-        <item itemvalue="Gradle.PermissionDetectorTest.matchEmptyLabelsFalseLabellessNodeStillMatchesViaAsterisk" />
-        <item itemvalue="Gradle.FilterTypeHelperTest" />
-        <item itemvalue="Gradle.CypherEnforcerTest" />
+        <item itemvalue="Gradle.Tests in 'at.daho.cypherrewriting.cypherverificatorairbnb'" />
+        <item itemvalue="Gradle.CheckMutatedQueryLeaksTest.mutatedQueryDetectsLeakForUserFilteredReviewReturned" />
+        <item itemvalue="Gradle.CheckMutatedQueryLeaksTest" />
+        <item itemvalue="Gradle.ReviewAuthorFuzzerTest" />
+        <item itemvalue="Gradle.ReviewAuthorPermissionTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Physical" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -499,7 +520,13 @@
       <workItem from="1768408827926" duration="6777000" />
       <workItem from="1769110774802" duration="7310000" />
       <workItem from="1770065551528" duration="11993000" />
-      <workItem from="1770749276984" duration="26273000" />
+      <workItem from="1770749276984" duration="27228000" />
+      <workItem from="1771277008358" duration="91000" />
+      <workItem from="1771355512636" duration="24181000" />
+      <workItem from="1771712561227" duration="543000" />
+      <workItem from="1772051784543" duration="17438000" />
+      <workItem from="1772485508191" duration="17145000" />
+      <workItem from="1773097996011" duration="25527000" />
     </task>
     <task id="LOCAL-00001" summary="Modifications to work for Cypher verification.">
       <option name="closed" value="true" />
@@ -637,7 +664,79 @@
       <option name="project" value="LOCAL" />
       <updated>1770877527660</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Intermediate savepoint">
+      <option name="closed" value="true" />
+      <created>1770919433535</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1770919433535</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Intermediate savepoint before large claude refactoring">
+      <option name="closed" value="true" />
+      <created>1771456089228</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1771456089228</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Intermediate savepoint">
+      <option name="closed" value="true" />
+      <created>1772485646628</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1772485646628</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Intermediate savepoint">
+      <option name="closed" value="true" />
+      <created>1773089091820</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1773089091820</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Intermediate savepoint">
+      <option name="closed" value="true" />
+      <created>1773089103129</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1773089103129</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Intermediate savepoint">
+      <option name="closed" value="true" />
+      <created>1773098035695</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1773098035695</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Intermediate savepoint">
+      <option name="closed" value="true" />
+      <created>1773262538618</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1773262538618</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Intermediate savepoint">
+      <option name="closed" value="true" />
+      <created>1773301290497</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1773301290497</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Intermediate savepoint">
+      <option name="closed" value="true" />
+      <created>1773350955980</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1773350955980</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +747,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="SHOW_ROOT_NAMES" value="true" />
+            </State>
           </value>
         </entry>
       </map>
@@ -664,6 +765,7 @@
     <MESSAGE value="Fix submodules" />
     <MESSAGE value="Tests and bugfixes resulting from verifying a query generated by CypherFuzzer can be parsed, unparsed and remains the same." />
     <MESSAGE value="Verification that queries generated by CypherFuzzer can be processed by a database. Two valid types of exceptions were discovered which are accepted as valid testcases." />
+    <MESSAGE value="Intermediate savepoint before large claude refactoring" />
     <MESSAGE value="Intermediate savepoint" />
     <option name="LAST_COMMIT_MESSAGE" value="Intermediate savepoint" />
   </component>
