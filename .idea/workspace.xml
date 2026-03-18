@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca92ceea-e886-4a4f-8198-bc2c94cf131b" name="Changes" comment="Intermediate savepoint">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CypherRewritingCore" beforeDir="false" afterPath="$PROJECT_DIR$/CypherRewritingCore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/IdentifyReviewAuthorFuzzer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/IdentifyReviewAuthorFuzzer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/ReviewOwnershipFuzzer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/ReviewOwnershipFuzzer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/ReviewOwnershipPermissionConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CypherVerificatorAirbnb/src/main/kotlin/at/daho/cypherrewriting/cypherverificatorairbnb/fuzzer/ReviewOwnershipPermissionConfig.kt" afterDir="false" />
-    </list>
+    <list default="true" id="ca92ceea-e886-4a4f-8198-bc2c94cf131b" name="Changes" comment="Add CypherFuzzer2 as submodule" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,30 +42,6 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
-                <item name="CypherVerificatorAirbnb" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
-                <item name="CypherVerificatorAirbnb" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
-                <item name="CypherVerificatorAirbnb" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CypherRewritingSystemVerification" type="f1a62948:ProjectNode" />
-                <item name="CypherVerificatorAirbnb" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -96,6 +66,16 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="Intermediate savepoint" />
+        <option name="rewordedMessage" value="Intermediate savepoint" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="b4216a51dc4cf0399667d60c29319f62fe7de1e1" />
   </component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.0.0-bin/d6wjpkvcgsg3oed0qlfss3wgl/gradle-9.0.0" javaHome="$USER_HOME$/.jdks/openjdk-21.0.1" gradleVersion="9.0.0" />
   <component name="HighlightingSettingsPerFile">
@@ -189,7 +169,7 @@
     &quot;Spring Boot.ParserUnparser.executor&quot;: &quot;Run&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;airbnb-indirect-access&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;/home/daniel/IdeaProjects/CypherRewritingSystemVerification/CypherRewritingCore/src/test/kotlin/at/jku/faw/symspace/cypherrewriter/core&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/daniel/IdeaProjects/CypherRewritingSystemVerification/error_report&quot;,
@@ -736,7 +716,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773350955980</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add CypherFuzzer2 as submodule">
+      <option name="closed" value="true" />
+      <created>1773868058883</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1773868058883</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add CypherFuzzer2 as submodule">
+      <option name="closed" value="true" />
+      <created>1773956126430</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1773956126430</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -767,6 +763,8 @@
     <MESSAGE value="Verification that queries generated by CypherFuzzer can be processed by a database. Two valid types of exceptions were discovered which are accepted as valid testcases." />
     <MESSAGE value="Intermediate savepoint before large claude refactoring" />
     <MESSAGE value="Intermediate savepoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Intermediate savepoint" />
+    <MESSAGE value="Intermediate savepoint&#10;Add CypherFuzzer2 as submodule" />
+    <MESSAGE value="Add CypherFuzzer2 as submodule" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add CypherFuzzer2 as submodule" />
   </component>
 </project>

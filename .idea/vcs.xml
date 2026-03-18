@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/CypherFuzzer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CypherFuzzer2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/CypherRewritingCore" vcs="Git" />
   </component>
 </project>
