@@ -116,7 +116,6 @@ abstract class FuzzBaseRunner(
         }
         returnSettings {
             propertyAccessProbability = 0.0
-            aggregationProbability = 0.2
             limitProbability = 0.0
             aggregationProbability = 0.0
         }
